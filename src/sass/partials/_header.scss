@@ -1,0 +1,29 @@
+header {
+    // display: flex;
+    height: 40px;
+    background-color: black;
+    // position: relative;
+    .logo {
+        // &.justify-content: flex-start;
+        // &.align-items: center;
+        color: white;
+        margin-left: 20px;
+        vertical-align: bottom;
+        line-height: 40px;
+        span {
+            color: $mainColor;
+        }
+    }
+    .navigation {
+        // position: absolute;
+        float: right;
+        list-style: none;
+        // color: white;
+        // text-decoration-line: none;
+        // text-decoration: none;
+        // display: inline-block;
+        li {
+            display: inline-block;
+        }
+    }
+}

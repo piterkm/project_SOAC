@@ -1,0 +1,53 @@
+@import "modules/reset";
+@import "modules/mixins";
+@import "modules/all";
+@import "modules/colors";
+@import "partials/variables";
+@import "partials/header";
+@import "partials/base";
+@import "partials/footer";
+
+@font-face {
+	font-family: Raleway;
+	src: url(fonts/raleway/Raleway-Light.ttf);
+
+}
+
+//GRID 12 KOLUMN
+.grid-container {
+	width: $containerFullWidth;
+	max-width: $containerWidth;
+	border: 1px solid red;
+	margin: 0 auto;
+	padding-left: 1px;
+
+	.row {
+		&:before, &:after {
+			content: "";
+			display: table;
+			clear: both;
+			border: 1px solid blue;
+		}
+
+		[class*="col-"] {
+			float: left;
+			min-height: 1px;
+			border: 1px solid greenyellow;
+			// padding: 10px;
+			// margin-top: 10px;
+			// @media (max-width: 550px) {
+			// 	float: none;
+			// 	width: 100%;
+			// }
+		}
+	}
+
+	$i: $columns; //12
+
+	@while $i > 0 {
+		.col-#{$i} {
+			width: $i * $columnWidth;
+		}
+		$i: $i - 1;
+	}
+}
