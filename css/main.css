@@ -75,7 +75,15 @@ header {
   display: block; }
 
 .carousel {
-  height: 100%; }
+  height: 100%;
+  background: white;
+  background: -moz-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, white), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
+  background: -webkit-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+  background: -o-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+  background: -ms-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+  background: linear-gradient(to bottom, white 0%, #f6f6f6 47%, #ededed 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 ); }
 
 .carousel-navigation {
   font-size: 4rem;
@@ -83,14 +91,63 @@ header {
   .carousel-navigation .carousel-arrow-right {
     float: right; }
 
-.carousel-image {
-  line-height: 500%; }
+.pricing {
+  background: #f1f1f1; }
 
-.carousel-text .carousel-button {
-  background-color: #2ec5aa;
-  color: white;
-  padding: 10px 20px 10px 20px;
-  border-radius: 5%; }
+.price-header {
+  padding: 40px 0 40px 0;
+  font-size: 20px;
+  color: #4c4c4c; }
+  .price-header .price-header-underline {
+    height: 5px;
+    width: 33%;
+    background-color: #2ec5aa;
+    margin-top: 5px; }
+
+[class*="price-plan"] {
+  border: 1px solid #c1c1c1;
+  background: #f9f9f9;
+  height: 500px;
+  margin: 10px 10px 10px 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  [class*="price-plan"] .outer-circle {
+    position: absolute;
+    top: -40px;
+    height: 60px;
+    width: 60px;
+    border: 1px solid #c1c1c1;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    [class*="price-plan"] .outer-circle .inner-circle {
+      height: 30px;
+      width: 30px;
+      background-color: #c1c1c1;
+      border-radius: 50%; }
+  [class*="price-plan"] h3 {
+    color: #2ec5aa;
+    margin: 40px 0 40px 0;
+    font-size: 20px; }
+  [class*="price-plan"] .price-circle {
+    height: 150px;
+    width: 150px;
+    border: 1px solid #c1c1c1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 40px;
+    color: #c1c1c1; }
+    [class*="price-plan"] .price-circle span {
+      font-size: 15px; }
+    [class*="price-plan"] .price-circle .per-month-text {
+      font-size: 20px; }
 
 html {
   font-family: "Raleway-Regular", Arial, sans-serif; }
