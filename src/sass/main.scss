@@ -1,16 +1,29 @@
 @import "modules/reset";
+@import "modules/fonts";
 @import "modules/mixins";
 @import "modules/all";
 @import "modules/colors";
 @import "partials/variables";
 @import "partials/header";
+@import "partials/homepage";
 @import "partials/base";
 @import "partials/footer";
 
-@font-face {
-	font-family: Raleway;
-	src: url(fonts/raleway/Raleway-Light.ttf);
+html {
+	font-family: "Raleway-Regular", Arial, sans-serif;
+}
 
+.main-color {
+	color: $mainColor;
+}
+
+.bold-text {
+	font-family: "Raleway-Bold";
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
 }
 
 //GRID 12 KOLUMN
@@ -19,7 +32,6 @@
 	max-width: $containerWidth;
 	border: 1px solid red;
 	margin: 0 auto;
-	padding-left: 1px;
 
 	.row {
 		&:before, &:after {

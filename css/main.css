@@ -27,25 +27,68 @@ main, article, aside, figure, footer, header, nav, section, details, summary {
 html {
   font-size: 16px; }
 
-header {
-  height: 40px;
-  background-color: black; }
-  header .logo {
-    color: white;
-    margin-left: 20px;
-    vertical-align: bottom;
-    line-height: 40px; }
-    header .logo span {
-      color: #2ec5aa; }
-  header .navigation {
-    float: right;
-    list-style: none; }
-    header .navigation li {
-      display: inline-block; }
+@font-face {
+  font-family: "Raleway-Regular";
+  src: local("Raleway-Regular"), url("../../../fonts/raleway/Raleway-Regular.ttf"); }
 
 @font-face {
-  font-family: Raleway;
-  src: url(fonts/raleway/Raleway-Light.ttf); }
+  font-family: "Raleway-Bold";
+  src: local("Raleway-Bold"), url("../../../fonts/raleway/Raleway-Bold.ttf"); }
+
+header {
+  height: 40px;
+  background-color: black;
+  font-family: "Raleway-Regular";
+  color: white; }
+  header #logo {
+    line-height: 40px; }
+  header .navigation {
+    line-height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; }
+    header .navigation li {
+      margin-left: 30px; }
+      header .navigation li a:link, header .navigation li a:visited, header .navigation li a:hover, header .navigation li a:active {
+        text-decoration: none;
+        color: white; }
+
+#dropdown-button:hover, #dropdown-button:focus {
+  background-color: white;
+  color: black; }
+
+.dropdown-content {
+  position: relative;
+  display: inline-block; }
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  line-height: 200%;
+  padding: 5px 15px 5px 15px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  z-index: 1; }
+
+.show {
+  display: block; }
+
+.carousel-element-text {
+  margin: 0 auto; }
+
+html {
+  font-family: "Raleway-Regular", Arial, sans-serif; }
+
+.main-color {
+  color: #2ec5aa; }
+
+.bold-text {
+  font-family: "Raleway-Bold"; }
+
+.row {
+  display: flex;
+  justify-content: space-between; }
 
 .grid-container {
   width: 100%;
