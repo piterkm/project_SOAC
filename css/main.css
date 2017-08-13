@@ -74,8 +74,23 @@ header {
 .show {
   display: block; }
 
-.carousel-element-text {
-  margin: 0 auto; }
+.carousel {
+  height: 100%; }
+
+.carousel-navigation {
+  font-size: 4rem;
+  line-height: 500%; }
+  .carousel-navigation .carousel-arrow-right {
+    float: right; }
+
+.carousel-image {
+  line-height: 500%; }
+
+.carousel-text .carousel-button {
+  background-color: #2ec5aa;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5%; }
 
 html {
   font-family: "Raleway-Regular", Arial, sans-serif; }
